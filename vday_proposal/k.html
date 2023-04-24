@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+<style>
+
+body {overflow:hidden;}
+
+.static {
+    position:absolute;
+    background:white;
+}
+
+.static:hover {
+    opacity:0.25;
+
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+button.text {
+    background:none;
+    border:none;
+    text-align:center;
+    color: rgb(101, 8, 22);
+    font-size: xx-large;
+    font-weight:bold;
+}
+
+button.changePic {
+    font-weight: bold;
+    text-align:center;
+    margin-bottom: 100px;
+    float: left;
+    margin-top: -300px;
+    margin-left:100px;
+}
+
+
+</style>
+
+</head>
+
+<body style="background-color:#b2191992;">
+
+<div style="text-align:center; white-space:initial; font-size:smaller"> 
+    <p1 id="myText">CLICK HERE FIRST<br>
+            |<br>
+            |<br>
+            V<br>
+            <br>
+    </p1>
+</div>
+
+<div style="text-align:center; color:rgb(101, 8, 22);">
+    <button id = "button1" class="text" onClick="clickme()"><strong>Hello there miss!</strong></button>
+</div>
+
+<script>
+    var button1 = -1;
+    var button2 = -1;
+    function clickme() {
+        button1++;
+
+        display = ["Welcome to your lil page! (keep clickin)",
+                    "Yes it's pink-panther themed.",
+                    "Yes I listened to pink pantheress non-stop while coding this (seriously).",
+                    "It's pretty simple...",
+                    "Click me to change the text, go slow please, because",
+                    "Hover over the gifs for?",
+                    "Yeah! Click on the that ponk button for another gif, then click me :(",
+                    "the gifs are all yours now, click me one last time :)",
+                    "pink panther girl"
+        ]
+
+        if (button1 != 9) {
+            document.getElementById("button1").textContent = display[button1];
+        }
+        else {
+            document.getElementById("button1").disabled = true;
+        }
+    }
+
+    function change() {
+        button2++;
+
+        if (button2 == 0) {
+            document.getElementById("image1").src = "kiss_hye.gif";
+            document.getElementById("backtext").textContent = "me thinkin abt u";
+        }
+        else if (button2 == 1) {
+            document.getElementById("image1").src = "pantheress.gif";
+            document.getElementById("backtext").textContent = "me lookin at u";
+        }
+        else if (button2 == 2) {
+            document.getElementById("image1").src = "sadge.gif";
+            document.getElementById("backtext").textContent = "me when i'm not wih- winch- with you";
+        }
+        else if (button2 == 3) {
+            document.getElementById("image1").src = "ten.gif";
+            document.getElementById("backtext").textContent = "me when i see your date fits (all fits)";
+        }  
+        else if (button2 == 4) {
+            document.getElementById("image1").src = "argue.gif";
+            document.getElementById("backtext").textContent = "us arguin (the dude is acc a pantheress)";
+        }
+        else if (button2 == 5) {
+            document.getElementById("image1").src = "bow.gif";
+            document.getElementById("backtext").textContent = "cool right? I've got one more...";
+        }
+
+        else if (button2 == 6) {
+            document.getElementById("image1").src = "valentine.gif";
+            document.getElementById("backtext").textContent = "pretty please?";
+
+            var button = document.createElement
+        }
+        
+    }
+
+</script>
+
+<div class="image">
+    <img id="image1" class = "static" src="hide.gif">
+    <p1 id="backtext" style="font-size:30px">this text hiding from you :o</p1>
+</div>
+
+<div style="text-align:left;">
+    <button id="button2" class="changePic" onClick=change() style="color:pink; background-color: palevioletred;">ponk</button>
+</div>
+
+</body>
+</html> 
